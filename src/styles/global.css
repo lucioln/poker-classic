@@ -1,0 +1,13 @@
+html {
+  background-image: url(../../public/images/backgroud.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-clip: initial;
+  font-family: Outfit;
+  height: 100%;
+  overflow: hidden;
+}
+.container-login{
+  display:flex;
+  justify-content: space-between;
+}
