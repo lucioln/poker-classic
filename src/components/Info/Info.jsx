@@ -8,7 +8,9 @@ import { DivRedes } from "./Info.styles";
 const Info = () => {
   return (
     <DivRedes>
-      <a href="/cadastro">Cadastre-se agora</a>
+      <div>
+        <a href="/cadastro">Cadastre-se agora</a>
+      </div>
       <div>
         <a>
           <AiOutlineMail className="email" />
