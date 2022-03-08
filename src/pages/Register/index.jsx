@@ -4,12 +4,12 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
 import { Container } from "../../styles/index.styles";
-import Logo from "../Logo/Logo";
-import ImgBack from "../ImgBack/ImgBack";
-import ButtonLogin from "../Button/Button";
+import Logo from "../../components/Logo/Logo";
+import ImgBack from "../../components/ImgBack/ImgBack";
+import ButtonLogin from "../../components/Button/Button";
 
-function FormRegister() {
-  const schema = yup
+function index() {
+  const schema = yup //SCHEMA VALIDATION YUP
     .object({
       nome: yup
         .string()
@@ -86,4 +86,4 @@ function FormRegister() {
   );
 }
 
-export default FormRegister;
+export default index;
