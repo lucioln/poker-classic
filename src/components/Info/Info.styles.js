@@ -1,11 +1,10 @@
 import styled from "styled-components";
 
 export const DivRedes = styled.div`
-  position: absolute;
   width: auto;
   height: 60px;
-  left: 13%;
-  top: 624px;
+  left: 12%;
+  margin-top: 170px;
   color: #ffffff;
 
   font-family: Outfit, sans-serif;

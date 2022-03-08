@@ -3,11 +3,40 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   background-clip: initial;
-  font-family: Outfit;
+  font-family: Outfit, sans-serif;
   height: 100%;
   overflow: hidden;
 }
-.container-login{
-  display:flex;
+form {
+  display: flex;
+}
+
+.check {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: white;
   justify-content: space-between;
+}
+
+.links-form {
+  width: 468px;
+  text-align: justify;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  max-width: 468px;
+  color: white;
+}
+.terms {
+  position: absolute;
+  width: 468px;
+  text-align: justify;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  max-width: 468px;
+  color: white;
 }

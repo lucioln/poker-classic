@@ -6,10 +6,10 @@ import LocalBg from "../../../public/images/bgcartas.png";
 const ImgBack = () => {
   return (
     <div className="container">
-    <ImgBackStyle>
-      <Image src={LocalBg} />
-    </ImgBackStyle>
-    </div> 
+      <ImgBackStyle>
+        <Image src={LocalBg} />
+      </ImgBackStyle>
+    </div>
   );
 };
 

@@ -2,10 +2,9 @@ import styled from "styled-components";
 
 export const LoginButton = styled.button`
   position: absolute;
+  margin-top: 65px;
   width: 485px;
   height: 71px;
-  left: 128px;
-  top: 526px;
   display: block;
   border: none;
   background: #1abc9c;
