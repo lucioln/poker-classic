@@ -4,7 +4,9 @@ import LogoPoker from "../../../public/images/logo.png";
 const Logo = () => {
   return (
     <LogoDiv>
-      <Image src={LogoPoker} />
+      <a href="/">
+        <Image src={LogoPoker} />
+      </a>
     </LogoDiv>
   );
 };

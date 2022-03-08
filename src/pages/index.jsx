@@ -23,7 +23,9 @@ const index = () => {
             <label className="links-form">Lembrar de mim </label>
           </div>
           <div className="colum right">
-            <a className="links-form">Esqueceu a senha?</a>
+            <a className="links-form" href="/recuperar">
+              Esqueceu a senha?
+            </a>
           </div>
         </div>
         <ButtonLogin nome="LOGIN"></ButtonLogin>

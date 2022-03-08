@@ -28,6 +28,8 @@ form {
   line-height: 20px;
   max-width: 468px;
   color: white;
+  cursor: pointer;
+  text-decoration: none;
 }
 .terms {
   position: absolute;
