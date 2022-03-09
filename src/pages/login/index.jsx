@@ -1,4 +1,6 @@
 import React from "react";
+import Link from "next/link";
+
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -64,9 +66,9 @@ function Login() {
             <label className="links-form">Lembrar de mim </label>
           </div>
           <div className="colum right">
-            <a className="links-form" href="/recuperar">
-              Esqueceu a senha?
-            </a>
+            <Link href="/recover">
+              <a className="links-form">Esqueceu a senha?</a>
+            </Link>
           </div>
         </div>
         <Button nome="LOGIN" />

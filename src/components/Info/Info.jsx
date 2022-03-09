@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { GrFacebookOption } from "react-icons/gr";
 import { AiOutlineMail } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
@@ -9,7 +11,7 @@ const Info = () => {
   return (
     <DivRedes>
       <div>
-        <a href="/cadastro">Cadastre-se agora</a>
+        <Link href="/register">Cadastre-se agora</Link>
       </div>
       <div>
         <a>

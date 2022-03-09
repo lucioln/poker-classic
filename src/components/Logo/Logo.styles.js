@@ -6,6 +6,7 @@ export const LogoDiv = styled.div`
   height: 86.42px;
   left: 200.47px;
   top: 62.75px;
+  cursor: pointer;
 
   .title {
     margin-botton: 0px;
