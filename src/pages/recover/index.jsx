@@ -5,9 +5,9 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
 import { Container } from "../../styles/index.styles";
-import Logo from "../Logo/Logo";
-import ImgBack from "../ImgBack/ImgBack";
-import ButtonLogin from "../Button/Button";
+import Logo from "../../components/Logo/Logo";
+import Button from "../../components/Button/Button";
+import ImgBack from "../../components/ImgBack/ImgBack";
 
 function FormReset() {
   const schema = yup
@@ -45,10 +45,10 @@ function FormReset() {
             ></input>
             <p className="erros">{errors.email?.message}</p>
           </div>
-          <ButtonLogin nome="RECUPERAR CONTA"></ButtonLogin>
+          <Button nome="RECUPERAR CONTA" />
         </Container>
       </form>
-      <ImgBack></ImgBack>
+      <ImgBack />
     </div>
   );
 }

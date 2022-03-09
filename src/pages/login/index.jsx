@@ -4,12 +4,12 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
 import { Container } from "../../styles/index.styles";
-import Logo from "../Logo/Logo";
-import ButtonLogin from "../Button/Button";
-import ImgBack from "../ImgBack/ImgBack";
-import Info from "../Info/Info";
+import Logo from "../../components/Logo/Logo";
+import Button from "../../components/Button/Button";
+import ImgBack from "../../components/ImgBack/ImgBack";
+import Info from "../../components/Info/Info";
 
-function FormLogin() {
+function Login() {
   const schema = yup
     .object({
       email: yup
@@ -69,12 +69,12 @@ function FormLogin() {
             </a>
           </div>
         </div>
-        <ButtonLogin nome="LOGIN"></ButtonLogin>
-        <Info></Info>
+        <Button nome="LOGIN" />
+        <Info />
       </Container>
-      <ImgBack></ImgBack>
+      <ImgBack />
     </form>
   );
 }
 
-export default FormLogin;
+export default Login;

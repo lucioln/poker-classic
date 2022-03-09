@@ -6,9 +6,9 @@ import * as yup from "yup";
 import { Container } from "../../styles/index.styles";
 import Logo from "../../components/Logo/Logo";
 import ImgBack from "../../components/ImgBack/ImgBack";
-import ButtonLogin from "../../components/Button/Button";
+import Button from "../../components/Button/Button";
 
-function index() {
+function Register() {
   const schema = yup //SCHEMA VALIDATION YUP
     .object({
       nome: yup
@@ -78,7 +78,7 @@ function index() {
               <strong>Política de Privacidade.</strong>
             </label>
           </div>
-          <ButtonLogin nome="CRIAR CONTA" />
+          <Button nome="CRIAR CONTA" />
         </Container>
       </form>
       <ImgBack />
@@ -86,4 +86,4 @@ function index() {
   );
 }
 
-export default index;
+export default Register;
