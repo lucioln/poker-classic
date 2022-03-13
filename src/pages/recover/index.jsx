@@ -36,7 +36,7 @@ function FormReset() {
       <form onSubmit={handleSubmit(onSubmit)}>
         <Container>
           <Logo />
-          <div className="line-form one">
+          <div className="line-form">
             <label>Email:</label>
             <input
               type="text"

@@ -11,17 +11,14 @@ import Button from "../../components/Button/Button";
 function Register() {
   const schema = yup //SCHEMA VALIDATION YUP
     .object({
-      nome: yup
-        .string()
-        .min(5, "minimo 6 caracteres")
-        .required("nome é obrigatório"),
+      nome: yup.string().required("nome é obrigatório"),
       email: yup
         .string()
         .email("email inválido")
         .required("email é obrigatório"),
       senha: yup
         .string()
-        .min(8, "minimo 8 caracteres")
+        .min(8, "senha deve possuir o minimo de 8 caracteres")
         .required("senha é obrigatório"),
     })
     .required();
@@ -43,7 +40,7 @@ function Register() {
       <form onSubmit={handleSubmit(onSubmit)}>
         <Container>
           <Logo />
-          <div className="line-form one">
+          <div className="line-form">
             <label>Nome:</label>
             <input
               type="text"
@@ -52,7 +49,7 @@ function Register() {
             ></input>
             <p className="erros">{errors.nome?.message}</p>
           </div>
-          <div className="line-form one">
+          <div className="line-form">
             <label>Email:</label>
             <input
               type="email"
@@ -61,7 +58,7 @@ function Register() {
             ></input>
             <p className="erros">{errors.email?.message}</p>
           </div>
-          <div className="line-form two">
+          <div className="line-form">
             <label className="form-label">Senha:</label>
             <input
               type="password"

@@ -40,7 +40,7 @@ function Login() {
     <form onSubmit={handleSubmit(onSubmit)}>
       <Container>
         <Logo />
-        <div className="line-form one">
+        <div className="line-form">
           <label>Login:</label>
           <input
             type="text"
@@ -61,13 +61,13 @@ function Login() {
           <p className="erros">{errors.senha?.message}</p>
         </div>
         <div className="check">
-          <div className="colum left">
+          <div className="colum-left">
             <input type="checkbox" />
             <label className="links-form">Lembrar de mim </label>
           </div>
           <div className="colum right">
             <Link href="/recover">
-              <a className="links-form">Esqueceu a senha?</a>
+              <a className="links-form">Esqueci a senha</a>
             </Link>
           </div>
         </div>

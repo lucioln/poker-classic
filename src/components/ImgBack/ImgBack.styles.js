@@ -8,4 +8,8 @@ export const ImgBackStyle = styled.div`
   padding: 0;
   right: 0px;
   top: 0px;
+
+  @media (max-width: 1350px) {
+    display: none;
+  }
 `;

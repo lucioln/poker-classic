@@ -1,3 +1,8 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
 html {
   background-image: url(../../public/images/backgroud.png);
   background-size: cover;
@@ -19,26 +24,24 @@ form {
   justify-content: space-between;
 }
 
-.links-form {
-  width: 468px;
-  text-align: justify;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 20px;
-  max-width: 468px;
-  color: white;
-  cursor: pointer;
-  text-decoration: none;
-}
 .terms {
-  position: absolute;
-  width: 468px;
+  width: 100%;
   text-align: justify;
-  font-style: normal;
-  font-weight: normal;
   font-size: 16px;
-  line-height: 20px;
-  max-width: 468px;
   color: white;
+}
+@media (max-width: 640px) {
+  .terms {
+    position: relative;
+  }
+}
+
+.erros {
+  color: red;
+}
+
+.colum-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

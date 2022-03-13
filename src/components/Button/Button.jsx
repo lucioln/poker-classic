@@ -1,6 +1,7 @@
+import Link from "next/link";
 import { LoginButton } from "./Button.styles";
 
-export default function ButtonLogin(props) {
+export default function Button(props) {
   return (
     <div>
       <a>
