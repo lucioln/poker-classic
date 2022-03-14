@@ -7,5 +7,6 @@ export const LogoDiv = styled.div`
   margin-left: 16%;
   @media (max-width: 550px) {
     margin-top: 10%;
+    margin-left: 30%;
   }
 `;

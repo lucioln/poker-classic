@@ -2,21 +2,23 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import Router from "next/router";
 
 import { Container } from "../../styles/index.styles";
 import Logo from "../../components/Logo/Logo";
 import ImgBack from "../../components/ImgBack/ImgBack";
 import Button from "../../components/Button/Button";
+import Input from "../../components/Input/Input";
 
 function Register() {
   const schema = yup //SCHEMA VALIDATION YUP
     .object({
-      nome: yup.string().required("nome é obrigatório"),
+      name: yup.string().required("nome é obrigatório"),
       email: yup
         .string()
         .email("email inválido")
         .required("email é obrigatório"),
-      senha: yup
+      pass: yup
         .string()
         .min(8, "senha deve possuir o minimo de 8 caracteres")
         .required("senha é obrigatório"),
@@ -33,6 +35,7 @@ function Register() {
 
   const onSubmit = (user) => {
     console.log(user);
+    Router.push("/login");
   };
 
   return (
@@ -40,42 +43,34 @@ function Register() {
       <form onSubmit={handleSubmit(onSubmit)}>
         <Container>
           <Logo />
-          <div className="line-form">
-            <label>Nome:</label>
-            <input
-              type="text"
-              {...register("nome")}
-              className="input-form"
-            ></input>
-            <p className="erros">{errors.nome?.message}</p>
-          </div>
-          <div className="line-form">
-            <label>Email:</label>
-            <input
-              type="email"
-              {...register("email")}
-              className="input-form"
-            ></input>
-            <p className="erros">{errors.email?.message}</p>
-          </div>
-          <div className="line-form">
-            <label className="form-label">Senha:</label>
-            <input
-              type="password"
-              {...register("senha")}
-              className="input-form"
-            ></input>
-            <p className="erros">{errors.senha?.message}</p>
-          </div>
-          <div>
+          <Input
+            label="nome"
+            type="text"
+            erro={errors.name?.message}
+            register={{ ...register("name", { required: true }) }}
+          />
+          <Input
+            label="Email"
+            type="email"
+            erro={errors.email?.message}
+            register={{ ...register("email", { required: true }) }}
+          />
+          <Input
+            label="Senha"
+            type="password"
+            erro={errors.pass?.message}
+            register={{ ...register("pass", { required: true }) }}
+          />
+
+          <div className="check">
             <input type="checkbox"></input>
-            <label className="terms">
+            <label>
               Confirmo que eu tenho pelo menos 18 anos de idade e que eu li e
-              entendi o <strong>Acordo de Licença do Usuário Final</strong> e a{" "}
-              <strong>Política de Privacidade.</strong>
+              entendi o <strong>Acordo de Licença do Usuário Final</strong> e a
+              <strong> Política de Privacidade.</strong>
             </label>
           </div>
-          <Button nome="CRIAR CONTA" />
+          <Button namebtn="CRIAR CONTA" background="#008B8B" />
         </Container>
       </form>
       <ImgBack />

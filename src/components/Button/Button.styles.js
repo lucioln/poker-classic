@@ -18,4 +18,7 @@ export const LoginButton = styled.button`
     right: 20%;
     height: 55px;
   }
+  @media (max-height: 700px) {
+    margin-top: 1%;
+  }
 `;

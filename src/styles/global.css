@@ -12,9 +12,6 @@ html {
   height: 100%;
   overflow: hidden;
 }
-form {
-  display: flex;
-}
 
 .check {
   display: flex;

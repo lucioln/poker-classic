@@ -4,9 +4,15 @@ export const Container = styled.div`
   margin-top: 2%;
   margin-left: 5%;
   width: 40%;
+
   @media (max-width: 1350px) {
     margin: 0 auto;
     width: 80%;
+  }
+  @media (max-height: 700px) {
+    overflow: scroll;
+    overflow-y: visible;
+    height: 100%;
   }
 
   .line-form {
@@ -18,7 +24,7 @@ export const Container = styled.div`
   }
 
   .input-form {
-    font-size: 30px;
+    font-size: 30px;s
     background: transparent;
     outline: none;
     border: none;
@@ -35,7 +41,6 @@ export const Container = styled.div`
 
   .links-form {
     text-align: center;
-
     font-size: 16px;
     color: white;
     cursor: pointer;

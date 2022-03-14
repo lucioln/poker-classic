@@ -1,4 +1,5 @@
 import React from "react";
+import Router from "next/router";
 import Link from "next/link";
 
 import { useForm } from "react-hook-form";
@@ -10,6 +11,7 @@ import Logo from "../../components/Logo/Logo";
 import Button from "../../components/Button/Button";
 import ImgBack from "../../components/ImgBack/ImgBack";
 import Info from "../../components/Info/Info";
+import Input from "../../components/Input/Input";
 
 function Login() {
   const schema = yup
@@ -18,7 +20,7 @@ function Login() {
         .string()
         .email("email inválido")
         .required("email é obrigatório"),
-      senha: yup
+      pass: yup
         .string()
         .min(8, "minimo 8 caracteres")
         .required("senha é obrigatório"),
@@ -34,32 +36,25 @@ function Login() {
 
   const onSubmit = (user) => {
     console.log(user);
+    Router.push("https://lucionoleto.com.br");
   };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <Container>
         <Logo />
-        <div className="line-form">
-          <label>Login:</label>
-          <input
-            type="text"
-            name="email"
-            {...register("email")}
-            className="input-form"
-          ></input>
-          <p className="erros">{errors.email?.message}</p>
-        </div>
-        <div className="line-form two">
-          <label className="form-label">Senha:</label>
-          <input
-            type="password"
-            name="senha"
-            {...register("senha")}
-            className="input-form"
-          ></input>
-          <p className="erros">{errors.senha?.message}</p>
-        </div>
+        <Input
+          label="Login"
+          type="email"
+          erro={errors.email?.message}
+          register={{ ...register("email", { required: true }) }}
+        />
+        <Input
+          label="Senha"
+          type="password"
+          erro={errors.pass?.message}
+          register={{ ...register("pass", { required: true }) }}
+        />
         <div className="check">
           <div className="colum-left">
             <input type="checkbox" />
@@ -71,7 +66,7 @@ function Login() {
             </Link>
           </div>
         </div>
-        <Button nome="LOGIN" />
+        <Button namebtn="LOGIN" />
         <Info />
       </Container>
       <ImgBack />

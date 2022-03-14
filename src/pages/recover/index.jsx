@@ -1,4 +1,5 @@
 import React from "react";
+import Router from "next/router";
 
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -8,6 +9,7 @@ import { Container } from "../../styles/index.styles";
 import Logo from "../../components/Logo/Logo";
 import Button from "../../components/Button/Button";
 import ImgBack from "../../components/ImgBack/ImgBack";
+import Input from "../../components/Input/Input";
 
 function FormReset() {
   const schema = yup
@@ -29,6 +31,7 @@ function FormReset() {
 
   const onSubmit = (user) => {
     console.log(user);
+    Router.push("/login");
   };
 
   return (
@@ -36,16 +39,13 @@ function FormReset() {
       <form onSubmit={handleSubmit(onSubmit)}>
         <Container>
           <Logo />
-          <div className="line-form">
-            <label>Email:</label>
-            <input
-              type="text"
-              {...register("email")}
-              className="input-form"
-            ></input>
-            <p className="erros">{errors.email?.message}</p>
-          </div>
-          <Button nome="RECUPERAR CONTA" />
+          <Input
+            label="Email"
+            type="email"
+            erro={errors.email?.message}
+            register={{ ...register("email", { require: true }) }}
+          />
+          <Button namebtn="RECUPERAR CONTA" />
         </Container>
       </form>
       <ImgBack />
