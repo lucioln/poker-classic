@@ -9,8 +9,8 @@ export const Container = styled.div`
     margin: 0 auto;
     width: 80%;
   }
-  @media (max-height: 700px) {
-    overflow: scroll;
+  @media (max-height: 500px) {
+    overflow: auto;
     overflow-y: visible;
     height: 100%;
   }
