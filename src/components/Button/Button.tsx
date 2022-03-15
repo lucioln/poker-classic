@@ -8,15 +8,11 @@ interface IProps {
 export default function Button(props: IProps) {
   const { typebtn, namebtn, background } = props;
   return (
-    <div>
-      <a>
-        <LoginButton
-          type={typebtn || "submit"}
-          style={{ background: background ? background : "#1abc9c" }}
-        >
-          {namebtn}
-        </LoginButton>
-      </a>
-    </div>
+    <LoginButton
+      type={typebtn || "submit"}
+      style={{ background: background ?? "#1abc9c" }}
+    >
+      {namebtn}
+    </LoginButton>
   );
 }

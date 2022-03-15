@@ -35,21 +35,19 @@ function FormReset() {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <Container>
-          <Logo />
-          <Input
-            label="Email"
-            type="email"
-            erro={errors.email?.message}
-            register={{ ...register("email", { require: true }) }}
-          />
-          <Button namebtn="RECUPERAR CONTA" />
-        </Container>
-      </form>
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <Container>
+        <Logo />
+        <Input
+          label="Email"
+          type="email"
+          erro={errors.email?.message}
+          register={{ ...register("email", { require: true }) }}
+        />
+        <Button namebtn="RECUPERAR CONTA" />
+      </Container>
       <ImgBack />
-    </div>
+    </form>
   );
 }
 

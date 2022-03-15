@@ -5,12 +5,11 @@ import { LineForm } from "./Input.style";
 interface IProps {
   label?: string;
   type?: string;
-  erro: ReactNode;
+  erro: string;
   register?: any;
 }
 
-function Input(props: IProps) {
-  const { label, type, register, erro } = props;
+function Input({ label, type, register, erro }: IProps) {
   return (
     <LineForm>
       <label>{label}</label>

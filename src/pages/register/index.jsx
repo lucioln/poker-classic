@@ -39,42 +39,40 @@ function Register() {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <Container>
-          <Logo />
-          <Input
-            label="nome"
-            type="text"
-            erro={errors.name?.message}
-            register={{ ...register("name", { required: true }) }}
-          />
-          <Input
-            label="Email"
-            type="email"
-            erro={errors.email?.message}
-            register={{ ...register("email", { required: true }) }}
-          />
-          <Input
-            label="Senha"
-            type="password"
-            erro={errors.pass?.message}
-            register={{ ...register("pass", { required: true }) }}
-          />
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <Container>
+        <Logo />
+        <Input
+          label="nome"
+          type="text"
+          erro={errors.name?.message}
+          register={{ ...register("name", { required: true }) }}
+        />
+        <Input
+          label="Email"
+          type="email"
+          erro={errors.email?.message}
+          register={{ ...register("email", { required: true }) }}
+        />
+        <Input
+          label="Senha"
+          type="password"
+          erro={errors.pass?.message}
+          register={{ ...register("pass", { required: true }) }}
+        />
 
-          <div className="check">
-            <input type="checkbox"></input>
-            <label>
-              Confirmo que eu tenho pelo menos 18 anos de idade e que eu li e
-              entendi o <strong>Acordo de Licença do Usuário Final</strong> e a
-              <strong> Política de Privacidade.</strong>
-            </label>
-          </div>
-          <Button namebtn="CRIAR CONTA" background="#008B8B" />
-        </Container>
-      </form>
+        <div className="check">
+          <input type="checkbox"></input>
+          <label>
+            Confirmo que eu tenho pelo menos 18 anos de idade e que eu li e
+            entendi o <strong>Acordo de Licença do Usuário Final</strong> e a
+            <strong> Política de Privacidade.</strong>
+          </label>
+        </div>
+        <Button namebtn="CRIAR CONTA" background="#008B8B" />
+      </Container>
       <ImgBack />
-    </div>
+    </form>
   );
 }
 
