@@ -14,12 +14,10 @@ const Info = () => {
         <Link href="/register">Cadastre-se agora</Link>
       </div>
       <div>
-        <a>
-          <AiOutlineMail className="email" />
-          <GrFacebookOption className="facebook" />
-          <FcGoogle className="google" />
-          <FaApple className="email" />
-        </a>
+        <AiOutlineMail className="icons" />
+        <GrFacebookOption className="icons" color="#1976d2" />
+        <FcGoogle className="icons" />
+        <FaApple className="icons" />
       </div>
     </DivRedes>
   );

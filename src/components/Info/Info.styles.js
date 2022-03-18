@@ -10,8 +10,12 @@ export const DivRedes = styled.div`
   font-size: 16px;
   line-height: 23px;
   text-align: center;
+  text-decoration: none;
 
-  .email {
+  @media (max-width: 500px) {
+    font-size: 10px;
+  }
+  .icons {
     margin-top: 20px;
     height: 45px;
     cursor: pointer;
@@ -31,52 +35,8 @@ export const DivRedes = styled.div`
       width: 15px;
     }
   }
-
-  .facebook {
-    margin-top: 20px;
-    height: 45px;
-    cursor: pointer;
-    width: 45px;
-    color: #1976d2;
-    margin-left: 5px;
-    background: #ffffff;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-    border: 10px solid #ffffff;
-    border-radius: 50%;
-    @media (max-width: 1350px) {
-      height: 25px;
-      width: 25px;
-    }
-    @media (max-width: 400px) {
-      height: 15px;
-      width: 15px;
-    }
-  }
-  .google {
-    margin-top: 20px;
-    height: 45px;
-    cursor: pointer;
-    width: 45px;
-    margin-left: 5px;
-    background: #ffffff;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-    border: 10px solid #ffffff;
-    border-radius: 50%;
-    @media (max-width: 1350px) {
-      height: 25px;
-      width: 25px;
-    }
-    @media (max-width: 400px) {
-      height: 15px;
-      width: 15px;
-    }
-  }
-
   a {
     text-decoration: none;
     color: #ffffff;
-    @media (max-width: 500px) {
-      font-size: 10px;
-    }
   }
 `;
