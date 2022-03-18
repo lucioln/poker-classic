@@ -6,12 +6,12 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
-import { Container } from "../../styles/index.styles";
-import Logo from "../../components/Logo/Logo";
-import Button from "../../components/Button/Button";
-import ImgBack from "../../components/ImgBack/ImgBack";
-import Info from "../../components/Info/Info";
-import Input from "../../components/Input/Input";
+import { Container } from "../styles/index.styles";
+import Logo from "../components/Logo/Logo";
+import Button from "../components/Button/Button";
+import ImgBack from "../components/ImgBack/ImgBack";
+import Info from "../components/Info/Info";
+import Input from "../components/Input/Input";
 
 function Login() {
   const schema = yup

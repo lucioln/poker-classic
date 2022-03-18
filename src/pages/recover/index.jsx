@@ -31,7 +31,7 @@ function FormReset() {
 
   const onSubmit = (user) => {
     console.log(user);
-    Router.push("/login");
+    Router.push("/");
   };
 
   return (

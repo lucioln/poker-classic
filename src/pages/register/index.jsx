@@ -35,7 +35,7 @@ function Register() {
 
   const onSubmit = (user) => {
     console.log(user);
-    Router.push("/login");
+    Router.push("/");
   };
 
   return (
@@ -43,7 +43,7 @@ function Register() {
       <Container>
         <Logo />
         <Input
-          label="nome"
+          label="Nome"
           type="text"
           erro={errors.name?.message}
           register={{ ...register("name", { required: true }) }}

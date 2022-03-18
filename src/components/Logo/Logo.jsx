@@ -8,7 +8,7 @@ import Link from "next/link";
 const Logo = () => {
   return (
     <LogoDiv>
-      <Link href="/login">
+      <Link href="/">
         <Image src={LogoPoker} />
       </Link>
     </LogoDiv>
